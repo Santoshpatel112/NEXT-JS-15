@@ -1,3 +1,3 @@
 export default function reviewDetails({params}){
-    return (<h2>reviewDetails {params.reviewid}</h2>);
+    return (<h2>product id {params.productid} reviewDetails {params.reviewid}</h2>);
 }
