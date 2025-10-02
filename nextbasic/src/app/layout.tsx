@@ -39,7 +39,6 @@ export default function RootLayout({
           <Link href='/blog'>blog Page</Link>
           <Link href='/myfolder'>My Folder</Link>
           <Link href='/product'>Product</Link>
-          
         </div>
         {children}
       </body>
