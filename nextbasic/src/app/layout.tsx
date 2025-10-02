@@ -52,7 +52,7 @@ export default function RootLayout({
           <Link href='/product'>Product</Link> */}
 
           {navigation.map((item)=>{
-            return (<Link key={item.href} href={item.href}>{item.name}</Link>) // key is important for each item in the list
+            return (<Link  key={item.href} href={item.href}>{item.name}</Link>) // key is important for each item in the list
           })}
         </div>
         {children}
