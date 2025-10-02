@@ -38,6 +38,7 @@ export default function RootLayout({
           <Link href='/chart/line-chart'>Line Chart</Link>
           <Link href='/blog'>blog Page</Link>
           <Link href='/myfolder'>My Folder</Link>
+          <Link href='/product'>Product</Link>
           
         </div>
         {children}
