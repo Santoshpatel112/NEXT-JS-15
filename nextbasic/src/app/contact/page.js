@@ -1,5 +1,7 @@
 export const metadata = {
-    title: "contact",
+    title: {
+        default: "Contact", // default title for each page
+    },
     description: "This is the contact page"
 }
 export default function contact(){
