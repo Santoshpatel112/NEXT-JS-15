@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { link } from "fs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,13 +43,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex gap-4 p-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:geist_a71539c9-module__T19VSG__className">
-          <Link href='/About'>About</Link>
+          {/* <Link href='/About'>About</Link>
           <Link href='/contact'>Contact</Link>
           <Link href='/chart'>Chart</Link>
           <Link href='/chart/line-chart'>Line Chart</Link>
           <Link href='/blog'>blog Page</Link>
           <Link href='/myfolder'>My Folder</Link>
-          <Link href='/product'>Product</Link>
+          <Link href='/product'>Product</Link> */}
+
+          {navigation.map((item)=>{
+            return (<Link key={item.href} href={item.href}>{item.name}</Link>)
+          })}
         </div>
         {children}
       </body>
