@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Product() {
     return (
         <div
@@ -20,10 +21,10 @@ export default function Product() {
             >
                 <h2 style={{ textAlign: "center", marginBottom: "24px" }}>Products</h2>
                 <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}>product1</li>
-                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}>product2</li>
-                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}>product3</li>
-                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}>product4</li>
+                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}><Link  href="/product/1">product1</Link></li>
+                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}><Link href={"/product/2"}>product2</Link></li>
+                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}><Link href={"/product/3"}>product3</Link></li>
+                    <li style={{ padding: "10px 0", borderBottom: "1px solid #eee" }}><Link href={"/product/4"}>product4</Link></li>
                     <li style={{ padding: "10px 0" }}>product5</li>
                 </ul>
             </div>
