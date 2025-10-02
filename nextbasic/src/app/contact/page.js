@@ -1,6 +1,6 @@
 export const metadata = {
     title: {
-        default: "Contact", // default title for each page
+        absolute: "Contact", // default title for each page
     },
     description: "This is the contact page"
 }
