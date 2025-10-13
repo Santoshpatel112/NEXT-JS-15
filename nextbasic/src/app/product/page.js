@@ -1,4 +1,4 @@
-import "use client";
+"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ export default function Product() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch products (example public API). Replace URL with your API or /api route.
   async function fetchProducts(signal) {
     try {
       setError(null);
@@ -15,7 +14,6 @@ export default function Product() {
       const res = await fetch("https://fakestoreapi.com/products?limit=5", { signal });
       if (!res.ok) throw new Error(`Server responded ${res.status}`);
       const data = await res.json();
-      // normalize to simple shape used below
       setProducts(
         data.map((p, i) => ({
           id: p.id ?? i + 1,
@@ -26,7 +24,7 @@ export default function Product() {
       if (err.name === "AbortError") return;
       console.error("fetchProducts error:", err);
       setError(err.message || "Failed to load products");
-      setProducts([]); // clear stale data
+      setProducts([]);
     } finally {
       setLoading(false);
     }
@@ -95,7 +93,6 @@ export default function Product() {
                 <Link href={`/product/${p.id}`}>{p.name}</Link>
               </li>
             ))}
-            {/* keep a static fallback item */}
             <li style={{ padding: "10px 0" }}>product5</li>
           </ul>
         )}
